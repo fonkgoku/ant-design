@@ -10,17 +10,13 @@ trigger:
     exclude:
     - gh-pages
 
-resources:
-  repositories:
-    - repository: self
-
 jobs:
   - job: test_
     pool:
       vmImage: 'Ubuntu-16.04'
     strategy:
       matrix:
-        TEST_TYPE:
+        Lint:
           TEST_TYPE: lint
         dist-react@16:
           REACT: 16
@@ -59,7 +55,7 @@ jobs:
       - task: NodeTool@0
         inputs:
           versionSpec: '11.x'
-      - script: npm install
+      - script: yarn install
         displayName: install
       - script: scripts/install-react.sh
         displayName: install-react
