@@ -24,9 +24,6 @@ npm-debug.log
 nohup.out
 _site
 _data
-dist
-/lib
-/es
 elasticsearch-*
 config/base.yaml
 /.vscode/
@@ -42,4 +39,4 @@ components/**/*.jsx
 site/theme/template/IconDisplay/*.js
 site/theme/template/IconDisplay/*.jsx
 site/theme/template/IconDisplay/fields.js
-*.tmp
+*.tmp 
