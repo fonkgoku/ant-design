@@ -10,14 +10,11 @@ trigger:
 resources:
   repositories:
     - repository: self
-    
+
 jobs:
   - job: test_
     pool:
       vmImage: 'Ubuntu-16.04'
-    checkout:
-      fetchDepth: 1
-      clean: false
     strategy:
       matrix:
         TEST_TYPE:
@@ -53,6 +50,9 @@ jobs:
           REACT: 15
           TEST_TYPE: test:node
     steps:
+      - checkout:
+        fetchDepth: 1
+        clean: false
       - task: NodeTool@0
         inputs:
           versionSpec: '11.x'
