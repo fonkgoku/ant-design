@@ -5,7 +5,6 @@
 name: ant design
 
 trigger:
-  autoCancel: true
   branches:
     exclude:
     - gh-pages
