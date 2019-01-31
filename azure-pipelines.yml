@@ -10,13 +10,14 @@ trigger:
 resources:
   repositories:
     - repository: self
-      fetchDepth: 1
-      clean: false
-
+    
 jobs:
   - job: test_
     pool:
       vmImage: 'Ubuntu-16.04'
+    checkout:
+      fetchDepth: 1
+      clean: false
     strategy:
       matrix:
         TEST_TYPE:
