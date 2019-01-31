@@ -5,7 +5,10 @@
 name: ant design
 
 trigger:
-  - master
+  autoCancel: true
+  branches:
+    exclude:
+    - gh-pages
 
 resources:
   repositories:
