@@ -55,7 +55,7 @@ jobs:
       - task: NodeTool@0
         inputs:
           versionSpec: '11.x'
-      - script: yarn install
+      - script: npm install
         displayName: install
       - script: scripts/install-react.sh
         displayName: install-react

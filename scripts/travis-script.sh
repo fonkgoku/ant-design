@@ -5,7 +5,7 @@ set -e
 
 run_test() {
   if [ "$REACT" != 16 ]; then
-    npm test -- -w 2 -u $*
+    npm test -- -w 11 -u $*
   else
     npm test -- -w 2 $*
   fi
