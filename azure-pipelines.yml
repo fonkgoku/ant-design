@@ -50,9 +50,7 @@ jobs:
           REACT: 15
           TEST_TYPE: test:node
     steps:
-      - checkout:
-        fetchDepth: 1
-        clean: false
+      - checkout: none
       - task: NodeTool@0
         inputs:
           versionSpec: '11.x'
