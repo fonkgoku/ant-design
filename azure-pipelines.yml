@@ -5,6 +5,7 @@
 name: ant design
 
 trigger:
+  batch: true
   branches:
     exclude:
     - gh-pages
@@ -52,7 +53,9 @@ jobs:
           REACT: 15
           TEST_TYPE: test:node
     steps:
-      - checkout: none
+      - checkout: self
+        fetchDepth: 1
+        clean: false 
       - task: NodeTool@0
         inputs:
           versionSpec: '11.x'
